@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "condition": {
+      "urlFilter": "*",
+      "resourceTypes": ["image", "imageset"]
+    },
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "accept",
+          "operation": "set",
+          "value": "image/png,image/jpeg,image/svg+xml,image/*;q=0.8,*/*;q=0.5"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "condition": {
+      "urlFilter": "*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    },
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "accept",
+          "operation": "set",
+          "value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/png,image/jpeg,image/svg+xml,*/*;q=0.8"
+        }
+      ]
+    }
+  }
+]

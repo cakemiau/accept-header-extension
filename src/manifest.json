@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Accept Header Override",
+  "description": "This extension overrides the default 'Accept' header to prevent websites from serving lossy WEBP images instead of the original PNG/JPG.",
+  "version": "1.0",
+  "minimum_chrome_version": "86",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "113.0"
+    }
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "path": "rules.json",
+        "enabled": true
+      }
+    ]
+  }
+}
